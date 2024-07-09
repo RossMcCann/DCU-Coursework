@@ -1,0 +1,87 @@
+NAME
+        myshell - 2024 CA216 Assignment
+
+SYNOPSIS
+        myshell [batchfile]
+
+DESCRIPTION
+        myshell is a simple command line interface written in C. It is run with the 
+        "myshell" command, and if a batchfile is provided with program invocation the 
+        shell will run in batchmode, and use the batchfile as stdin. When run in batchmode, 
+        the shell will terminate at the batchfile eof. Otherwise, myshell will be run 
+        in interactive mode, where stdin will be read from user input.
+
+COMMANDS
+        There are eight built-in commands in myshell. All other commands can be run by 
+        myshell, but require the program to execute them as a child process. The eight
+        built-in commands in myshell are:
+
+                cd
+                        Change the current default directory. An argument provided
+                        to cd is assumed to be a path to the desired directory.
+                clr
+                        Clear the screen.
+                dir
+                        List the contents of a directory. An argument provided to
+                        dir is assumed to be a path to the directory to list the 
+                        contents of. If no argument is passed, the command will list
+                        the contents of the current working directory.
+                environ
+                        Lists all the environment variables of the myshell program.
+                echo
+                        Prints the arguments on the display, followed by a newline. Multiple
+                        spaces and tabs will be reduced to one singular space.
+                help
+                        Displays the user manual for myshell.
+                pause
+                        Pauses operation of the myshell program and waits for the user
+                        to press enter before resuming operation.
+                quit
+                        Exit the myshell program.
+
+I/O REDIRECTION
+        The myshell program has the ability to redirect stdin and stdout to specified
+        file streams. An example of I/O redirection is:
+
+                programname arg1 arg2 < inputfile > outputfile
+
+        In this example, [programname] will be executed with arguments [arg1] and [arg2].
+        The stdin filestream will be replaced by [inputfile], and the stdout filestream
+        will be replaced by [outputfile].
+
+        With stdout redirection, the > symbol indicates that stdout will be redirected and
+        truncated in [outputfile]. If the redirection symbol is >>, then stdout will be
+        redirected and appended to [outputfile].
+
+BACKGROUND EXECUTION
+        It is possible for myshell to perform background execution of commands. This has not
+        been implemented for the myshell built-in commands, but can be performed on all other
+        commands. An ampersand character (&) at the end of the users command line input
+        indicates that myshell should execute the command in the background. In doing this,
+        myshell will return to the command line prompt immediately, and will continue to run
+        the previous program in the background. 
+
+MANUAL REFERENCES
+        The following references were used as rough outlines and inspiration for how to 
+        write my own manual for myshell
+
+                Linux Commands python3 manual. Available at: 
+                https://www.commandlinux.com/man-page/man1/python3.1.html (accessed 23/03/24)
+
+                die.net zsh manual. Available at: 
+                https://linux.die.net/man/1/zsh (accessed 23/03/24)
+
+                man7.or man - linux manual pages. Available at:
+                https://man7.org/linux/man-pages/man1/man.1.html (accessed 23/03/24)
+
+                Note: Much of the descriptions for the functionality of certain features of
+                myshell were taken from the project specification on DCU Loop:
+                https://loop.dcu.ie/mod/assign/view.php?id=2326066
+
+ACKNOWLEDGEMENT OF DCU ACADEMIC INTEGRITY POLICY:
+I declare that all work & ideas presented in this project, have been completed and
+presented in accordance with the DCU Academic Integrity Policy. All work presented is
+my own work, except where i have stated otherwise.
+
+Student Number: 22343526
+Student Name: Ross McCann
