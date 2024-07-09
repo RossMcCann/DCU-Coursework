@@ -1,4 +1,4 @@
-## React University App
+# React University App
 - CA298 Full Stack Development
 - An app for a University built with React JS
 - Uses a Django REST API to get modules, students etc...
