@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="text-align: center; margin-top: 50px;">Your order has been confirmed!</h1>
+    <h3 style="text-align: center; margin-top: 25px; margin-bottom: 25px;">View your order details below</h3>
+    <div class="card" style="margin-left: 490px; margin-right: 500px; padding-top: 25px; padding-bottom: 10px; padding-left: 10px; margin-bottom: 25px; font-size: 18px;">
+        <ul>
+            <li>Customer name: {{ order.name }}</li>
+            <li>Delivery address: {{ order.address }}</li>
+            <li>Pizza details:
+                <ul>
+                    <li>Pizza name: {{ order.pizza.name }}</li>
+                    <li>Size: {{ order.pizza.size }}</li>
+                    <li>Crust: {{ order.pizza.crust }}</li>
+                    <li>Sauce: {{ order.pizza.sauce }}</li>
+                    <li>Cheese: {{ order.pizza.cheese }}</li>
+                    <li>Toppings:
+                        <ul>
+                            {% for topping in order.pizza.toppings.all %}
+                                <li>{{ topping }}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Date Ordered: {{ order.order_date }}</li>
+            <li>Estimated delivery time: {{ order.eta }}</li>
+        </ul>
+    </div>
+    <p style="text-align: center; font-size: 20px">Return to your account <a style="color: 28673E" href="/account">here</a> to view previous orders.</p>
+{% endblock %}

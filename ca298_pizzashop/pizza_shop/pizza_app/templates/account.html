@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="text-align: center; margin-top: 50px; margin-bottom: 50px;">View your past orders below</h1>
+    <div class="accordion" id="parent" style="margin-left: 350px; margin-right: 350px; margin-bottom: 25px;">
+        {% for order in user_orders %}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading{{ order.id }}">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ order.id }}" aria-expanded="true" aria-controls="collapse{{ order.id }}" style="background-color: 28673E; color: F5F5F5; font-size: 20px;">
+                    {{ order.pizza.name }}
+                    </button>
+                </h2>
+                <div id="collapse{{ order.id }}" class="accordion-collapse collapse show" aria-labelledby="heading{{ order.id }}" data-bs-parent="#parent">
+                    <div class="accordion-body" style="font-size: 18px;">
+                        <li>Ordered on: {{ order.order_date }}</li>
+                        <li>Delivery address: {{ order.address }}</li>
+                        <li>Pizza details:</li>
+                        <ul>
+                            <li>Size: {{ order.pizza.size }}</li>
+                            <li>Crust: {{ order.pizza.crust }}</li>
+                            <li>Sauce: {{ order.pizza.sauce }}</li>
+                            <li>Cheese: {{ order.pizza.cheese }}</li>
+                            <li>Toppings:
+                                <ul>
+                                    {% for topping in order.pizza.toppings.all %}
+                                        <li>{{ topping }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <p style="text-align: center; font-size: 20px">You can create a new pizza <a style="color: 28673E" href="/create">here</a></p>
+    <p style="text-align: center; font-size: 20px">Click <a style="color: 28673E" href="/logout">here</a> to logout of your account</p>
+{% endblock %}

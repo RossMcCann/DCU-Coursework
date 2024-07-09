@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="text-align: center; margin-top: 25px;">Create your pizza here!</h1>
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 25px; margin-bottom: 20px;">
+        <form action="." method="POST" style="font-size: 25px; display: flex; flex-direction: column; align-items: center; width: 80%;">
+        {% csrf_token %}
+            <div style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 25px;">
+                <div class="mb-3" style="width: 40%; order: 1; display: flex; flex-direction: column; margin-left: 200px">
+                    <label for="id_name">Name:</label>
+                    {{ form.name }}
+                    {{ form.name.errors }}
+                    <label for="id_size">Size:</label>
+                    {{ form.size }}
+                    {{ form.size.errors }}
+                    <label for="id_crust">Crust:</label>
+                    {{ form.crust }}
+                    {{ form.crust.errors }}
+                    <label for="id_sauce">Sauce:</label>
+                    {{ form.sauce }}
+                    {{ form.sauce.errors }}
+                    <label for="id_cheese">Cheese:</label>
+                    {{ form.cheese }}
+                    {{ form.cheese.errors }}
+                </div>
+                <div class="mb-3" style="width: 45%; order: 2; margin-left: 5%;">
+                    <label for="id_toppings">Toppings:</label>
+                    {% for topping in form.toppings %}
+                        <div>{{ topping }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            <button class="btn" style="color: F5F5F5; background-color: 28673E; font-size: 18px; border-radius: 10px; order: 3; align-self: center;" type="submit">ORDER NOW</button>
+        </form>
+    </div>
+    {{ form.non_field_errors }}
+{% endblock %}

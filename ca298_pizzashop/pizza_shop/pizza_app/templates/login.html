@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="text-align: center; margin-top: 50px;">Login below!</h1>
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 50px; margin-bottom: 20px; margin-left: 475px; margin-right: 475px">
+        <form action="." method="POST" style="font-size: 25px;">
+            {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_username" style="display: flex;">Username:</label>
+                    {{ form.username }}
+                    {{ form.username.errors }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_password" style="display: flex;">Password:</label>
+                    {{ form.password }}
+                    {{ form.password.errors }}
+                </div>
+                <div style="text-align: center;">
+                    <button class="btn" style="color: F5F5F5; background-color: 28673E; font-size: 18px; border-radius: 10px;" type="submit">LOGIN</button>
+                </div>
+        </form>
+    </div>
+    <p style="text-align: center; font-size: 20px">Dont have an account? <a style="color: 28673E" href="{% url 'signup' %}">Sign up</a></p>
+{%  endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="max-width: 800px; margin: 0 auto;">
+    <h1 style="text-align: center; margin-top: 50px;">Hello, Welcome to Ross's Pizzeria</h1>
+    <div style="text-align: center; margin-top: 30px;">
+        <h3>About Us</h3>
+        <p style="margin-top: 5px; font-size: 20px;">Established in 2024, we're passionate about serving delicious pizzas made with the finest ingredients. We believe that great food brings people together, So whether you're dining in with family and friends, ordering delivery for a cozy night in, or hosting a special event, we're here to satisfy your cravings with our irresistible pizzas. Using authentic stone baking ovens and traditional techniques passed down through generations, we ensuring that every pizza embodies the essence of Italian craftsmanship and culinary expertise.</p>
+
+        {% if user.is_authenticated %}
+            <h3 style="margin-top: 25px">Hungry for a pizza? <a style="color: 28673E" href="/create">Click here<a></h3>
+        {% else %}
+            <h3 style="margin-top: 25px">Hungry for a pizza? <a style="color: 28673E;" href="/login">Click here<a></h3>
+        {% endif %}
+    </div>
+<div>
+{% endblock %}

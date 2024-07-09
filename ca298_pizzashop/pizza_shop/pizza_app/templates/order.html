@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 25px; margin-bottom: 20px; margin-left: 475px; margin-right: 475px">
+        <form action="." method="POST" style="font-size: 25px;">
+        {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_name" style="display: flex;">Name:</label>
+                {{ form.name }}
+                {{ form.name.errors }}
+            </div>
+            <div class="mb-3">
+                <label for="id_address" style="display: flex;">Address:</label>
+                {{ form.address }}
+                {{ form.address.errors }}
+            </div>
+            <div class="mb-3">
+                <label for="id_card_number" style="display: flex;">Card number:</label>
+                {{ form.card_number }}
+                {{ form.card_number.errors }}
+            </div>
+            <div class="mb-3">
+                <label for="id_expire_month" style="display: flex;">Expire month:</label>
+                {{ form.expire_month }}
+                {{ form.expire_month.errors }}
+            </div>
+            <div class="mb-3">
+                <label for="id_expire_year" style="display: flex;">Expire year:</label>
+                {{ form.expire_year }}
+                {{ form.expire_year.errors }}
+            </div>
+            <div class="mb-3">
+                <label for="id_ccv" style="display: flex;">CCV:</label>
+                {{ form.ccv }}
+                {{ form.ccv.errors }}
+            </div>
+            <div style="text-align: center;">
+                <button class="btn" style="color: F5F5F5; background-color: 28673E; font-size: 18px; border-radius: 10px;" type="submit">COMPLETE ORDER</button>
+            </div>
+        </form>
+    </div>
+    {{ form.non_field_errors }}
+{% endblock %}

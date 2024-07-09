@@ -1,0 +1,251 @@
+.Home-Container {
+    width: 50vw;
+    margin: 25vh auto 0; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+  }
+
+.Home-Title {
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.Home-Content {
+    text-align: center;
+}
+
+.Degrees-Title {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.Degrees-Card-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Degrees-Cards {
+    margin: 1vw;
+    text-align: center;
+}
+
+.Single-Degree-Title {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+
+.Single-Degree-Subtitle {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.Single-Degree-Card-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Single-Degree-Cards {
+    margin-right: 1vw;
+    text-align: center;    
+}
+
+.Cohorts-Title {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.Cohorts-Card-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Cohorts-Cards {
+    margin: 1vw;
+    text-align: center;    
+}
+
+.Single-Cohort-Title {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+
+.Single-Cohort-Subtitle {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.Single-Cohort-Student-Link {
+    text-decoration: none;
+}
+
+.Single-Cohort-Student-Link:hover {
+    text-decoration: underline;
+}
+
+.Single-Cohort-Student-List {
+    width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7.5vh;
+}
+
+.Single-Cohort-Student-List-Item {
+    width: 100%;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.Modules-Title {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.Modules-List {
+    width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7.5vh;
+}
+
+.Modules-List-Link {
+    text-decoration: none;
+}
+
+.Modules-List-Link:hover {
+    text-decoration: underline;
+}
+
+.Modules-List-Item {
+    width: 100%;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.Single-Module-Title {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+
+.Single-Module-Subtitle {
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+.Single-Module-Content-Container {
+    text-align: center;
+}
+
+.Single-Module-Content-Container-Title{
+    margin-bottom: 5vh;
+}
+
+.Single-Module-Cohorts-Cards-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Single-Module-Cohorts-Cards {
+    margin: 1vw;
+    text-align: center;
+}
+
+.Cohort-Modules-Title {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.Cohort-Modules-Card-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Cohort-Modules-Cards {
+    margin: 1vw;
+    text-align: center;
+}
+
+.Single-Student-Title {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+
+.Single-Student-Subtitle {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.Single-Student-Cards-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Single-Student-Cards {
+    margin: 1vw;
+    text-align: center;
+}
+
+.Form-Link {
+    margin-top: 5vh;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.Form-Link-Text {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.Form-Link-Text:hover {
+    text-decoration: underline;
+}
+
+.Create-Title {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.Create-Form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.Form-Group {
+    margin-bottom: 3vh;
+}
+
+.Form-Label {
+    font-size: 2vw;
+}
+
+.Form-Button {
+    font-size: 2vw;
+    margin-bottom: 3vh;
+}
+
+.Success-Alert {
+    margin: 0 auto;
+    width: 25vw;
+    text-align: center;
+    font-size: 2vw;
+}
